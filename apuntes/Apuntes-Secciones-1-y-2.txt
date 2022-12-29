@@ -1,0 +1,134 @@
+**********************************************
+https://www.udemy.com/course/solid-clean/
+**********************************************
+
+-------------------
+  Sección - 2
+-------------------
+Deuda técnica
+-> Falta de calidad en nuestro codigo o en el proceso del mismo que ocasionará costos en el futuro.
+
+Con decir costos se refiere a un enfoque econocimo de manera general, ya que para arreglar estos
+problemas se tiene que aportar tiempo de diferentes maneras, tanto para el mantenimiento, para la
+refactorización, para comprender el código y/o para la transferencia del código.
+
+Esquema de la deuda técnica
+
+1.- Imprudente y deliverada -> Deuda donde se actua de forma consciente e imprudente
+ejemplo -> No hay tiempo, sólo copia y pega.
+
+2.- Imprudente e Inadvertida -> Falta de experiencia, regularmente ocasionado por los juniors o los falsos senior.
+
+3.- Deuda prudente y deliverada -> Donde se conoce de la deuda pero se deja a un futuro ya que es mejor entregar
+el código como se tiene y mejorarlo en una oportunidad futura.
+
+4.- Prudente e Inadvertida -> Deuda donde se comprende que el camino tomado tal vez no fue lo mejor y se tiene
+la cuestión de continuar o renovar todo.
+
+-> Es importante entender que la deuda técnica siempre estará y regularmente es inevitable.
+
+Pago de la deuda técnica
+-> Para poder pagar la deuda es necesario la refactorización.
+
+Refactorización
+-> Se refiere al proceso que tiene como objetivo la mejora del código sin la alteración del resultado y comportamiento.
+logrando que sea más tolerante a los cambios y sea más entendible.
+
+** Es importantes contar con pruebas automáticas
+
+Clean code
+-> Se refiere más que nada a la forma de hacer que un código sea facil de leer.
+
+Nombre de las variables
+-> En Ingles
+-> Considerar las comisiones del lenguaje de programación y del equipo del trabajo
+-> Implementar CamelCase y SnakeCase según sea la necesidad
+-> Nombres pronunciables y expresivos
+-> Ausencia de información técnica en nombres (Evitar la reiteración de los tipos ya sea en clases, funciones, etc.)
+Ejemplo -> int edadEntero // mal -> con el mismo tipo de variable ya se sabe que es el tipo de dato es Entero
+
+Nombres dependiendo el tipo de dato
+* Arrays
+-> Es importante comprender el contenido interno del array para darle una mejor semantica.
+Ejemplo -> 
+//malo//
+const fruit = ["apple", "strawberry", "banana"]
+//recomendable//
+const fruitNames = ["apple", "strawberry", "banana"]
+
+* Booleans
+-> Recomendable utilizar los prefijos: "is" "can" "has"
+Ejemplo -> 
+//malo//
+const open = true
+const empty = true
+//recomendable//
+const isOpen = true
+const isEmpty = false
+
+* Numbers
+-> Recomendable utilizar prefijos: "max" "min" "total"
+//malo//
+const fruits = 3
+//recomendable//
+const maxFruits = 10
+const minFruits = 3
+const totalPriceOfFruits = getTotalPrice(fruitPrices)
+
+* Functions
+-> Deben de representar una acción en el nombre, comenzar con un verbo seguido de un sustantivo.
+-> El proceso que realizará la función debe de entenderse con el nombre, pero las condiciones y otros
+procesos internos no deben de ir en el nombre.
+
+Ejemplo -> 
+//malo//
+createUserIfNotExists()
+updateUserIfNotExists()
+//recomendable//
+createUser()
+updateUser()
+
+* Clases
+-> Nombre formados por sustantivos o frases de sustantivo
+-> Evitar nombres genericos
+-> Implementar UpperCamelCase
+-> Mucha especificación no es igual a un mejor nombre
+
+-> Preguntas que pueden orientas a hacerlo mejor
+¿Qué exactamente hacela clase?
+¿Cómo exactamente esta clase realiza cierto proceso?
+¿Hay algo expecífico sobre su ubicación?
+-> Si no tiene sentido, a renovarlo o refactorizarlo.
+
+Ejemplo -> 
+//malo//
+class Manager {}
+class Processor {}
+
+Funciones - Parametros - Argumentos
+-> Se recomienda limitar como maximo a 3 parámetros posicionales
+-> Una buena practica es la desestructuración de los parametros
+-> La simplicidad es fundamental
+-> Funciones con un tamaño lo más reducido posible
+-> Se recomienda menos de 20 líneas de código // OMG
+-> Evitar el uso del "else"
+-> Priorizar el uso de la condicional ternaria
+
+Principio DRY - Dont Repeat Yourself
+-> Evitar tener duplicidad de código
+-> Simplificar las pruebas
+-> Centralizar procesos
+-> Regularmente conlleva a refactorizar el código
+
+
+-------------------
+  Sección - 3
+-------------------
+
+-------------------
+  Sección - 4
+-------------------
+
+-------------------
+  Sección - 5
+-------------------
