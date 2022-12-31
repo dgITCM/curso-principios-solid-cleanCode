@@ -1,0 +1,87 @@
+**********************************************
+https://www.udemy.com/course/solid-clean/
+**********************************************
+-------------------
+  Sección - 4
+-------------------
+* Acrónimo STUPID - CodeSmells
+-> Practicamente es un conjunto de antipatrones que debemos de evitar para que 
+nuestro código no sufra de una mala deuda tecnica.
+
+* 6 CodeSmells que debemos de evitar
+1.- Singleton: Patrón singleton.
+Se refiere a una única instancia de la clase a lo largo de toda la aplicación.
+
+* Vive en contexto global
+* Modificable por cualquier y en cualquier momento
+* No es rastreable
+* Dificil de testear debido a su ubicación
+
+2.- Tight Coupling: Alto acoplamiento.
+Lo idea es tener bajo acoplamiento y buena cohesión
+
+-- Acoplamiento
+
+-> Dicho de otra forma, si se tiene un alto acoplamiento lo que provocará será lo siguiente:
+
+* Si se efectua un cambio en un modulo afectará radicalmente a otros modulos dependientes, esto
+generalmente es normal, pero es recomendable tener lo más bajo posiblde dependencia entre modulos.
+
+* Por la misma dependencia excesiva será más complicado ensamblar los diferentes modulos y sobre todo
+reutilizar y/o probarlos de manera independiente.
+
+-> Una posible solución es crear componentes / funciones / objetos lo más independientes posibles.
+
+-> Se refiere a la relación o dependencia de dos clases o modulos entre si.
+-> Bajo acoplamiento es cuando al cambiar algo importante en una clase no debería afectar directamente a otra.
+-> Alto acoplamiento es cuando al cambiar algo importante afecte a las demas clases relacionadas y esto obligue
+a una renovación del sistema.
+
+-- Cohesión
+
+-> La cohesión se refiere a lo que la clase puede hacer.
+-> La baja cohesión significaría que la clase realiza una gran variedad de acciones, osea es algo muy general.
+-> La alta cohesión significaría que se realizan acciones especificas de acuerdon a su objetivo.
+
+3.- Untestability: Código no probable (unit test).
+
+-> Debido a la alta dependencia el realizar una prueba unitaría será más complejo.
+
+4.- Premature optimization: optimizaciones prematuras.
+
+-> Darle la prioridad en que es lo más relevante hacer en el momento sin dejar de lado las buenas practicas
+ya que llegue el tiempo adecuado para ver si existe una mejora u optimización, tomarse el tiempo necesario
+para ello.
+
+-> Si se anticipa esta fase puede ocasionar una complejidad accidental.
+* Complejidad accidental = Cuando se implementa una solución compleja a un problema simple
+* Complejidad esencial = Cuando la complejidad es inherente al problema, ya viene en su naturaleza.
+
+5.- Indescriptive Naming: nombres poco descriptivos.
+* Nombres de variables mal nombradas
+* Nombres de clases genericas
+* Nombres de funciones mal nombradas
+* Ser muy especifico o demasiado generico.
+
+6.- Duplication: duplicidad de código, no aplicar el principio DRY.
+
+* Duplicidad Real
+- Codigo identico y cumple la misma función
+- Un cambio implicaria actualizar todo el código en varios lugares
+- Incrementa posibilidades de error humano al olvidar una parte para actualizar
+- Mayor cantidad de pruebas innecesarias
+
+* Duplicidad Accidental
+- Codigo luce similar pero cumple funciones distintas
+- Cuando hay un cambio, solo hay que modificar un solo lugar
+- Este tipo de duplicidad se puede trabajar con parametros u optimizaciones
+
+7.- Inflación
+-> Cuando un código tiene demasiadas lineas de código
+* Cuando esto sucede se procura "cortar" el total para obtener varios archivos con sus procesos.
+
+8.- Obsesión primitiva
+-> Si se cuenta con varias variables con valores se podrían remplazar en una clase u objeto.
+
+9.- Lista larga de parametros
+

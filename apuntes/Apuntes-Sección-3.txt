@@ -1,0 +1,64 @@
+**********************************************
+https://www.udemy.com/course/solid-clean/
+**********************************************
+-------------------
+  Sección - 3
+-------------------
+* Clases
+Uno de los principios más importantes es que las Clases deben de tener
+un nombre específico para dar entender que objetivo tiene y este no debe de abarcar demasiado.
+
+Es esencial priorizar la composición en vez de la herencia
+-> Principio de responsabilidad única
+
+__ Código - A __
+* Principio de responsabilidad única
+-> Ejemplo de la Herencia - Problematica
+Este ejemplo me pareció abismal, ya que desde que tengo memoria el concepto de herencia
+ha estado presente, más que nada con ese enfoque de hacerlo general y heredar sus funcionalidades.
+
+Sobre todo en el tema escolar.
+
+__ Código - B __
+-> No se recomienda usar abreviaturas, a excepción de las ya conocidas como "props", "url", "src".
+-> Implementación de interaces.
+-> Como anecdota personal en Java había empleado interfaces para aplicar como tal una herencia multiple en
+las clases, claro con sus reglas y comportamiento correspondiente al lenguaje.
+-> Con esta nueva forma de implementar y heredar, siento que es una forma de dejar más en claro los
+atributos de las clases y el agregar nuevas a la que se esta usando, cambia algo la forma de declaración,
+pero como menciona, sigue sin emplearse el principio de responsabilidad única.
+
+__ Código - C __
+-> Priorizar la composición en vez de la herencia
+-> Al hacer herencia se añade una capa extra de complejidad para los programadores
+-> Se puede usar pero debe ser en una situación completamente necesaria.
+-> De momento la única clase que aplica el principio es la clase "Person".
+-> Practicamente en el ejemplo lo que se hizo fue en vez de heredar aplicar instancias como propiedades
+dentro de la clase, que es practicamente una composición (como se menciona en el video).
+-> Aquí ya se esta aplicando el principio de responsabilidad única.
+-> Me parece curioso como esto realmente es un concepto proveniente de POO que si no lo ves con la lupa
+correcta como que no se valora el efecto producido, al menos yo puedo decir eso, ya que hasta ahorita que
+lo veo con el enfoque de cleancode pude ver todo lo que se gana al usarlo.
+
+* Estructura recomendada de una clase
+-> 1.- Propiedades estáticas
+-> 2.- Propiedades públicas o privadas
+-> 3.- Constructores estaticos
+-> 4.- Constructor estandar
+-> 5.- Metodos estaticos
+-> 6.- Metodos privados
+-> 7.- Metodos restantes ordenados por jerarquía
+-> 8.- Getters y Setters
+
+* Comentarios
+-> "Los comentarios deberían de ser la excepción, no la regla"
+-> Es recomendable que los comentarios en vez de explicar que hace tal función de una explicación
+sobre el por que se hace.
+
+Un ejemplo que se me ocurre es:
+-> Ejemplo: 
+*Malo
+// Esta función le envía los shareables a Custom slider para que se cree el slider a partir de un componente
+// que importa la librería react-slick
+*Bueno
+// Se implementó la librería react-slick por la facilidad que emplea en la creación y personalización de sliders.
